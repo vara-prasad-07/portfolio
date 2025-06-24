@@ -7,17 +7,24 @@ const formInfo = document.getElementById('form__info');
 const formPopupTxt = document.getElementById('form__popup-txt');
 
 form.addEventListener('submit', sendEmail);
-
+function form_mine(){
+  return new Promise((resolve, reject) => {
+    if (true) {
+      resolve("done");
+    } else {
+      reject(new Error('Form elements not found'));
+    }
+  });
+}
 async function sendEmail(e) {
   e.preventDefault();
   formInfo.classList.add('hide');
   sendBtn.value = 'Sending...';
 
-  const serviceID = 'service_2tr2x4p';
-  const templateID = 'template_k81pvtl';
+  
 
   try {
-    await emailjs.sendForm(serviceID, templateID, this);
+    await new form_mine();
     sendBtn.value = 'Send';
     nameField.value = '';
     emailField.value = '';

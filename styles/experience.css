@@ -1,0 +1,102 @@
+.container-experience {
+   background-image: linear-gradient(#02061E, #01020c91),  url(../assets/images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  position: relative;
+  margin: 0px;
+}
+.container-experience::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1;
+  background: linear-gradient(to top, rgb(3, 4, 13), transparent)
+}
+
+.experience {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1.5rem 4rem 1.5rem;
+}
+
+
+
+.all-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+.experience__item {
+  background: var(--card-bg, #0a0a23);
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+  padding: 2.5rem 2rem;
+  border-left: 6px solid var(--accent-color, #7c3aed);
+  color: #fff;
+  transition: box-shadow 0.3s, border-color 0.3s;
+  margin-bottom: 0;
+}
+
+.experience__item:hover {
+  box-shadow: 0 4px 32px rgba(124,58,237,0.15);
+  border-left: 6px solid var(--primary-color, #fff);
+}
+
+.experience__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.experience__header h3 {
+  font-family: var(--font-heading, 'Orbitron', 'Montserrat', sans-serif);
+  font-size: 2rem;
+  margin: 0;
+  color: var(--accent-color, #7c3aed);
+  font-weight: 600;
+}
+
+.experience__company {
+  font-weight: 600;
+  color: var(--accent-color, #7c3aed);
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+  display: inline-block;
+}
+
+.experience__date {
+  font-size: 1rem;
+  color: #bdbdbd;
+  margin-bottom: 0.5rem;
+}
+
+.experience__details {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  list-style: disc;
+}
+
+@media (min-width: 55rem) {
+  .all-experience {
+    flex-direction: row;
+    gap: 3rem;
+  }
+  .experience__item {
+    flex: 1 1 0;
+    min-width: 300px;
+  }
+  .experience__heading {
+    font-size: 5rem;
+    margin-bottom: 5rem;
+  }
+}
